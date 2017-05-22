@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Angular App</title>
+        <meta name="description" content="">
+        <!-- Define custom CSS-->
+        <link rel="stylesheet" type="text/css" href="public/styles/style.css">
+
+    </head>
+    <body ng-app="angularApp">
+
+        <div ng-controller="MainCtrl">
+            <!-- header -->
+            <div ng-include='headerTemplatePath' ng-controller="HeaderCtrl"></div>
+            <!-- main container -->
+            <div class="">
+                <div ng-view=""></div>
+            </div>
+            <!-- footer -->
+            <div ng-include='footerTemplatePath' ng-controller="FooterCtrl"></div>
+        </div>
+
+        <!--Liberaries-->
+        <script src="public/lib/angular/angular.js"></script>
+
+        <!--Application Configuration Files-->
+        <script src="public/scripts/app.js"></script>
+        <script src="public/scripts/config/appConfig.js"></script>
+        <script src="public/scripts/config/appRouting.js"></script>
+
+        <!--Header Controllers-->
+        <script src="public/scripts/controllers/header/headerCtrl.js"></script>
+        
+        <!--Footer Controllers-->
+        <script src="public/scripts/controllers/footer/footerCtrl.js"></script>
+
+        <!--Page Controllers-->
+        <script src="public/scripts/controllers/mainCtrl.js"></script>
+        <script src="public/scripts/controllers/page/homeCtrl.js"></script>
+        <script src="public/scripts/controllers/page/loginCtrl.js"></script>
+        <script src="public/scripts/controllers/page/dashboardCtrl.js"></script>
+
+    </body>
+</html>
